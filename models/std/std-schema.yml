@@ -1,18 +1,21 @@
 version: 2
 
 models:
-   - name: xpto1
-    description: pending
-    columns:
-      - name: id
-        tests:
-          - unique
-          - not_null
-
-
-
-  - name: xpto2
+  - name: unicorn
     description: pending
     columns:
       - name: id
         description: pending
+        tests:
+          - unique
+          - not_null
+
+  - name: ycombinator_startup
+    description: pending
+    columns:
+      - name: id
+        description: pending
+        tests:
+          - unique
+          - not_null
+

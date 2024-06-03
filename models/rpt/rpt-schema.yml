@@ -1,7 +1,2 @@
 version: 2
 
-models:
-  - name: xpto1
-    description: |
-      This table contains ...
- 

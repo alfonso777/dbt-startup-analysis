@@ -23,16 +23,8 @@ NOTE: DBT will fail if you do not specify a custom schema (i.e. with this setup 
 
         {{  custom_schema_name | trim }}
 
-    {%- elif target.name == 'prod' and custom_schema_name == 'DB_STATS' -%}
-
-        DB_STATS
-
-    {%- elif target.name != 'prod' and custom_schema_name == 'DB_STATS' -%}
-
-        {{ target.schema }}_SRC
-
     {%- else -%}
-
+        {{ print("Custom Schema: " ~ target.database ~ '.'~target.schema ~ "_" ~ custom_schema_name) }}
         {{ target.schema }}_{{ custom_schema_name | trim }}
 
     {%- endif -%}
