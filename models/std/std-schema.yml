@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: unicorn
+    description: pending
+    columns:
+      - name: id
+        description: pending
+        tests:
+          - unique
+          - not_null
+
+  - name: ycombinator_startup
+    description: pending
+    columns:
+      - name: id
+        description: pending
+        tests:
+          - unique
+          - not_null
+
