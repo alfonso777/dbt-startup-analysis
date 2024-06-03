@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: startups
+    database: raw
+    schema: startup
+    tables:
+      - name: unicorns
+        description: pending
+ 
+      - name: yc_startups
+        description: pending
