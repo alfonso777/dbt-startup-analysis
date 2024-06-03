@@ -1,4 +1,4 @@
-# Luma's DBT project
+# DBT project
 
 ## Overview
 There are 2 ways to run *dbt* in our project in Snowflake:
