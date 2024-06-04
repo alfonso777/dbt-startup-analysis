@@ -1,4 +1,4 @@
-{{ config(schema='STD', tags=["startup","unicorn"]) }}
+{{ config(schema='STD', tags=["startup","unicorn", "xpto"]) }}
 
 SELECT 
     _ROW AS id,
