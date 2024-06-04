@@ -1,14 +1,10 @@
+# Fivetran jobs definition to schedule Data  pipelines based on DBT
 jobs:
-# It'll be displayed in the Fivetran dashboard once your jobs are imported.
-# Job names must be unique.
  - name: dag1
-   schedule: 15 1-21 * * 1-5 #
+   schedule: 15 6-20 * * 1-5 # At minute 15 past every hour every day-of-week from Monday through Friday 
    steps:
      - name: run_all_models
        command: dbt run
      - name: test_all_models
        command: dbt test
-     #- name: run_rpt_models
-     #  command: dbt run --select models/rpt/ 
-     #- name: test_rpt_models
-     #  command: dbt test --select models/rpt/
+
