@@ -1,1 +1,5 @@
 version: 2
+
+models:
+  - name: unicorn_health
+    description: pending
