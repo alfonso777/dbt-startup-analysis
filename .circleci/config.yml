@@ -14,7 +14,7 @@ jobs:
     docker:
       - image: busybox
     steps:
-      - run: echo "Is it GIWM workflow \: << parameters.is-gwim-workflow >>"
+      - run: echo "Is it GIWM workflow  << parameters.is-gwim-workflow >>"
       - run:
           name: Run tests
           command: echo "<< pipeline.parameters.is-gwim-workflow >>"
