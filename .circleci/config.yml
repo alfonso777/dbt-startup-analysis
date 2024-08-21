@@ -2,11 +2,11 @@
 version: 2.1
 parameters:
   workflow:
-    type: enum
-    enum:
-      - w1
-      - w2
-    default: w1
+    type: string #enum
+    #enum:
+    #  - w1
+    #  - w2
+    default: "datacalc"
 jobs:
   build-and-test:
     docker:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - run:
           name: Run tests
-          command:echo 'Parameter workflow: <<parameters.workflow>>'
+          command:echo "Parameter workflow: <<parameters.workflow>>"
 workflows:
   sample:
     jobs:
