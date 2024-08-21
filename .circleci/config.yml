@@ -1,7 +1,7 @@
 ---
 version: 2.1
 parameters:
-  is-gwim-workflow:
+  is-my-workflow:
     type: boolean
     #type: string #enum
     #type: enum
@@ -14,10 +14,17 @@ jobs:
     docker:
       - image: busybox
     steps:
-      - run: echo "GWIM workflow => << pipeline.parameters.is-gwim-workflow >>"
-      - run:
-          name: Run tests
-          command: echo "<< pipeline.parameters.is-gwim-workflow >>"
+      - run: echo "GWIM workflow => << pipeline.parameters.is-my-workflow >>"
+      - when:
+          condition: << pipeline.parameters.is-my-workflow >>
+          steps:
+            - run: echo "It's mine"
+            - run: echo "Bye!"
+      - unles:
+          condition: << pipeline.parameters.is-my-workflow >>
+          steps:
+            - run: echo "It's not mine"
+            - run: echo "Bye ..."       
 workflows:
   sample:
     jobs:
