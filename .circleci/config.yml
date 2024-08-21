@@ -8,7 +8,7 @@ parameters:
     #enum:
     #  - w1
     #  - w2
-    default: boolean  #w1 #"datacalc"
+    default: false  #w1 #"datacalc"
 jobs:
   build-and-test:
     docker:
