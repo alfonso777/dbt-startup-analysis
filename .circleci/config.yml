@@ -14,7 +14,7 @@ jobs:
     steps:
       - run:
           name: Run tests
-          command: echo "Parameter workflow: <<parameters.workflow>>"
+          command: echo "Parameter workflow: << pipeline.parameters.workflow >>"
 workflows:
   sample:
     jobs:
