@@ -1,21 +1,23 @@
 ---
 version: 2.1
 parameters:
-  workflow:
+  is-gwim-workflow:
+    type: boolean
     #type: string #enum
-    type: enum
-    enum:
-      - w1
-      - w2
-    default: w1 #"datacalc"
+    #type: enum
+    #enum:
+    #  - w1
+    #  - w2
+    default: boolean  #w1 #"datacalc"
 jobs:
   build-and-test:
     docker:
       - image: busybox
     steps:
+      - run: echo "Is it GIWM workflow: " & echo "<< parameters.is-gwim-workflow >>"
       - run:
           name: Run tests
-          command: echo "<< pipeline.parameters.workflow >>"
+          command: echo "<< pipeline.parameters.is-gwim-workflow >>"
 workflows:
   sample:
     jobs:
