@@ -20,7 +20,7 @@ jobs:
           steps:
             - run: echo "It's mine"
             - run: echo "Bye!"
-      - unles:
+      - unless:
           condition: << pipeline.parameters.is-my-workflow >>
           steps:
             - run: echo "It's not mine"
