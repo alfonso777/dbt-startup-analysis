@@ -2,11 +2,12 @@
 version: 2.1
 parameters:
   workflow:
-    type: string #enum
-    #enum:
-    #  - w1
-    #  - w2
-    default: "datacalc"
+    #type: string #enum
+    type: enum
+    enum:
+      - w1
+      - w2
+    default: w1 #"datacalc"
 jobs:
   build-and-test:
     docker:
